@@ -3,19 +3,20 @@ import React from "react";
 export class SectionHeader extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      title: props.defaultText ? props.defaultText : "Title",
-      buttons: props.buttons ? props.buttons : null,
-    }
   }
 
   render() {
+    let btnsContainer = null;
+    if (this.props.buttons !== null) {
+      btnsContainer = <div className="btnsContainer">
+                        {this.props.buttons}
+                      </div>;
+    }
+
     return (
-      <div className="subHeader sectionHeader">
-        {this.state.title}
-        <div className="btnsContainer">
-          {this.state.buttons}
-        </div>
+      <div className="sectionHeader">
+        {this.props.title ? this.props.title : "Stock List"}
+        {btnsContainer}
       </div>
     );
   }

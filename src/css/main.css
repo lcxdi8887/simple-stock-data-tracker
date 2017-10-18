@@ -23,7 +23,7 @@ caption {
 }
 
 caption .updateDateTime {
-    color: rgba(38,166,154 ,1);
+    color: #004D40;
     font-size: 12px;
     font-weight: 400;
     float: right;
@@ -283,7 +283,7 @@ li {
     position: absolute;
     right: 0;
     top: 0;
-    background: url(icons/close.png) center/20px no-repeat;
+    background: url(../icons/close.png) center/20px no-repeat;
     border: none;
     cursor: pointer;
     padding: 10px;
@@ -296,7 +296,7 @@ li {
 }
 
 .btnSettings {
-    background: url(icons/settings.png) center/cover no-repeat;
+    background: url(../icons/settings.png) center/cover no-repeat;
 }
 
 .truncate {
@@ -461,4 +461,45 @@ input:checked + .slider:before {
     font-size: 13px;
     color: #666;
     margin-top: 5px;
+}
+
+/* 20171018 */
+/* common - overrides default styles */
+button {
+    height: 25px;
+    min-width: 25px;
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: .6;
+}
+
+.btnRefresh {
+    background: url(../icons/refresh.png) center/cover no-repeat;
+}
+
+/* section */
+/* section header */
+.sectionHeader {
+    background: #009688;
+    color: #fff;
+    border: 1px solid;
+    border-radius: 2px 2px 0 0;
+    padding: 6px 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 26px;
+    cursor: pointer;
+}
+
+.sectionHeader .btnsContainer {
+    float: right;
+}
+
+.sectionHeader .btnsContainer button {
+    margin-left: 10px;
 }
