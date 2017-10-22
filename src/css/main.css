@@ -14,22 +14,6 @@ table {
     border-collapse: collapse;
 }
 
-.panelHeader,
-caption {
-    font-size: 20px;
-    font-weight: bold;
-    text-align: left;
-    padding: 10px;
-}
-
-caption .updateDateTime {
-    color: #004D40;
-    font-size: 12px;
-    font-weight: 400;
-    float: right;
-    margin-top: 8px;
-}
-
 th, td {
     font-size: 12px;
     padding: 0 10px;
@@ -55,8 +39,8 @@ tr {
 
 tr:hover td {
     cursor: pointer;
-    background-color: rgba(0, 153, 204, 0.1);
-    border: 1px solid rgba(0, 153, 204, 1);
+    background-color: rgba(0, 150, 136, 0.1);
+    border: 1px solid rgba(0, 150, 136, 1);
     border-width: 1px 0;
 }
 
@@ -68,32 +52,6 @@ li {
 /* 
  * Details 
  */
- .subHeader {
-    background: #09c;
-    color: #fff;
-    padding: 5px 10px;
-    border-radius: 2px 2px 0 0;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 14px;
-    line-height: 25px;  /* same height with btns */
-    position: relative;
-    cursor: pointer;
-    border-bottom: 1px solid;
-}
-
-.subHeader .btn {
-    float: right;
-    height: 25px;
-    width: 25px;
-    border: none;
-    cursor: pointer;
-}
-
-.subHeader .btn:hover {
-    opacity: .7;
-}
-
 .stockSummaryInformation {
     font-size: 21px;
     border-style: solid;
@@ -465,6 +423,11 @@ input:checked + .slider:before {
 
 /* 20171018 */
 /* common - overrides default styles */
+.floatPanel {
+    float: left;
+    width: 50%;
+}
+
 button {
     height: 25px;
     min-width: 25px;
@@ -486,9 +449,7 @@ button:hover {
 .sectionHeader {
     background: #009688;
     color: #fff;
-    border: 1px solid;
-    border-radius: 2px 2px 0 0;
-    padding: 6px 10px;
+    padding: 7px 10px;
     text-transform: uppercase;
     font-weight: bold;
     font-size: 14px;

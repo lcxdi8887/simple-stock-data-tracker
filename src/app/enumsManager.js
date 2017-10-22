@@ -15,6 +15,32 @@ const EnumsManager = {
       text: "Top Losers",
     }
   ],
+  StockListColumns: [
+    {
+      key: "companyName",
+      name: "company name",
+    },
+    {
+      key: "symbol",
+      name: "symbol",
+    },
+    {
+      key: "sector",
+      name: "sector",
+    },
+    {
+      key: "change",
+      name: "change",
+    },
+    {
+      key: "changePercent",
+      name: "change percent",
+    },
+    {
+      key: "avgTotalVolume",
+      name: "avg volume",
+    },
+  ]
 };
 
 export default EnumsManager;
