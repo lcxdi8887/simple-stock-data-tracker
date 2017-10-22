@@ -1,55 +1,50 @@
 import React from "react";
 import { fetchData } from "../utils";
 import EnumsManager from "../enumsManager";
-import { StandardTable } from "./StandardTable";
+
 import { SectionHeader } from "./SectionHeader";
+import { ToggleButtons } from "./ToggleButtons";
+import { StandardTable } from "./StandardTable";
 
 export class StockLists extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      title: "New Title",
-      caption: "Stock List",
-      timeStamp: new Date().toLocaleString(),
     }
   }
 
-  settingClickHandler() {
+  handleToggleButtonsClick() {
     
   }
 
-  refreshClickHandler() {
-    const api = EnumsManager.StockListType.mostActive;
-    fetchData(api, function(data) {
-      debugger;
-      this.setState((prevState) => {
-        return {
-          caption: "Most Active Stocks",
-          timeStamp: new Date().toLocaleString()
-        }
-      });
-    }, this);
+  handelRefreshButtonClick() {
+    // const api = EnumsManager.StockListTypes[0].api;
+    // fetchData(api, function(data) {
+    //   debugger;
+    //   this.setState((prevState) => {
+    //     return {
+    //       caption: "Most Active Stocks",
+    //       timeStamp: new Date().toLocaleString()
+    //     }
+    //   });
+    // }, this);
   }
 
   render() {
+    // should I put those buttons here or componentWillMount?
+    // if I put them in componentwillmount, those configs will be only generate once, but have to use this.xx to reference them, does the shallow compare or compare will tell the difference when each time render calls to save the render of them?
     const headerButtons = [];
-    const settingButton = <button key="settings" 
-                                  title="settings"
-                                  className="btnSettings"
-                                  onClick={this.settingClickHandler.bind(this)} />;
+    const toggleButtons = <ToggleButtons buttons={EnumsManager.StockListTypes} />;
     const refreshButton = <button key="refresh"
                                   title="refresh this stock list"
-                                  className="btnRefresh"
-                                  onClick={this.refreshClickHandler.bind(this)} />;
+                                  className="btnRefresh" />;
+    headerButtons.push(toggleButtons);
     headerButtons.push(refreshButton);
-    headerButtons.push(settingButton);
 
     return (
       <div className="floatPanel leftPanel">
-        <SectionHeader buttons={headerButtons}
-                       title={this.state.title}/>
-        <StandardTable caption={this.state.caption}
-                       timeStamp={this.state.timeStamp}/>
+        <SectionHeader title="Stock List" buttons={headerButtons} />
+        <StandardTable />
       </div>
     );
   }

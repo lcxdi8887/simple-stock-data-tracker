@@ -1,9 +1,11 @@
+import React from "react";
+import PropTypes from 'prop-types';
+
 function ToggleButtons(props) {
+  const activeClass = "active";
   const buttons = props.buttons.map((button) => {
-    return <button key={button.key}
-                   name={button.key}
-                   className={props.activeButton === button.key ? "active" : ""}
-                   onClick={props.onClick}>
+    return <button key={button.type}
+                   id={"toggleButton-" + button.type} >
              {button.text}
            </button>;
   });
@@ -13,5 +15,9 @@ function ToggleButtons(props) {
     </div>
   );
 }
+
+ToggleButtons.propTypes = {
+  buttons: PropTypes.array.isRequired,
+};
 
 export { ToggleButtons }

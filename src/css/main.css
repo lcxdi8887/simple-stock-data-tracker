@@ -503,3 +503,21 @@ button:hover {
 .sectionHeader .btnsContainer button {
     margin-left: 10px;
 }
+
+.sectionHeader .btnsContainer .toggleButtonsContainer {
+    float: left;
+}
+
+.sectionHeader .btnsContainer .toggleButtonsContainer button {
+    margin: 0;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    font-size: 12px;
+}
+
+.sectionHeader .btnsContainer .toggleButtonsContainer button:hover {
+    opacity: 1;
+    background-color: #999;
+    border-color: transparent;
+    color: #fff;
+}

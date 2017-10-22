@@ -1,6 +1,6 @@
 import React from "react";
 
-export class StockDetails extends React.Component {
+export class RightPanel extends React.Component {
   render() {
     return (
       <div>

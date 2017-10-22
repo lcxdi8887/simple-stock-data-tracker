@@ -1,13 +1,15 @@
 import React from "react";
 
 export class StandardTable extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
   render() {
     return (
       <table>
-        <caption>
-          {this.props.caption}
-          <span className="updateDateTime">@Updated on {this.props.timeStamp}</span>
-        </caption>
+        <thead />
+        <tbody />
       </table>
     );
   }
