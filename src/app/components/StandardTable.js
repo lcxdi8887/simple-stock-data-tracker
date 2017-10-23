@@ -20,6 +20,7 @@ function StandardTable(props) {
 }
 
 StandardTable.propTypes = {
+  data: PropTypes.array.isRequired,
   columns: PropTypes.array.isRequired,
 };
 

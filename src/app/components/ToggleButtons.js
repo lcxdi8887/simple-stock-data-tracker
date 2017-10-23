@@ -5,7 +5,9 @@ function ToggleButtons(props) {
   const activeClass = "active";
   const buttons = props.buttons.map((button) => {
     return <button key={button.type}
-                   id={"toggleButton-" + button.type} >
+                   data-type={button.type}
+                   className={props.activeType === button.type ? activeClass : ""}
+                   onClick={props.onClick} >
              {button.text}
            </button>;
   });

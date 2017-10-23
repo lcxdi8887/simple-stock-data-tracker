@@ -444,6 +444,17 @@ button:hover {
     background: url(../icons/refresh.png) center/cover no-repeat;
 }
 
+.updatedTime {
+    border: 1px solid #ccc;
+    border-width: 0 1px;
+    font-size: 10px;
+    text-align: right;
+    color: #009688;
+    padding: 0 10px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
 /* section */
 /* section header */
 .sectionHeader {
@@ -481,4 +492,10 @@ button:hover {
     background-color: #999;
     border-color: transparent;
     color: #fff;
+}
+
+.sectionHeader .btnsContainer .toggleButtonsContainer button.active {
+    background: #FF9800;
+    color: #fff;
+    border-color: transparent;
 }
