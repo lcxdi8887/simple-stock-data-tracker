@@ -3,7 +3,10 @@ import PropTypes from 'prop-types';
 
 function StandardTableRow(props) {
   const row = props.columns.map((col) => {
-    return <td key={col.key}>{props.rowData[col.key]}</td>;
+    const value = props.rowData[col.key];
+    return <td key={col.key} className={col.alignRight ? "alignRight" : null} >
+            {col.numOfPrecision ? value.toFixed(col.numOfPrecision) : value}
+           </td>;
   });
   row.unshift(<td key="no">{props.index + 1}</td>);
 

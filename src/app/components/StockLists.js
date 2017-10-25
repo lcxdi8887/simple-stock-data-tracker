@@ -16,8 +16,16 @@ export class StockLists extends React.Component {
     }
   }
 
-  componentWillMount() {
-    this.fetchDataByType(this.state.activeType);
+  componentDidMount() {
+    // auto update every 10s
+    this.timerID = setInterval(
+      () => this.fetchDataByType(this.state.activeType),
+      10000
+    );
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.timerID);
   }
 
   fetchDataByType(activeType) {
@@ -67,7 +75,10 @@ export class StockLists extends React.Component {
     return (
       <div className="floatPanel">
         <SectionHeader title="Stock List" buttons={headerButtons} />
-        <div className="updatedTime">updated on {this.state.updatedTime ? this.state.updatedTime.toLocaleString() : "--"}</div>
+        <div className="updatedTime">
+          updated on {this.state.updatedTime ? this.state.updatedTime.toLocaleString() : "--"}
+          <img src="../../icons/info.png" className="iconInfo" title="The stock list table will automatically update every 10 seconds to make sure you have up-to-date data. If you want to retrieve real-time data, please click refresh button." />
+        </div>
         <StandardTable columns={EnumsManager.StockListColumns}
                        data={this.state.stockData} />
       </div>

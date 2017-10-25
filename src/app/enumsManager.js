@@ -31,14 +31,19 @@ const EnumsManager = {
     {
       key: "change",
       name: "change",
+      alignRight: true,
+      numOfPrecision: 3,
     },
     {
       key: "changePercent",
       name: "change percent",
+      alignRight: true,
+      numOfPrecision: 3,
     },
     {
       key: "avgTotalVolume",
       name: "avg volume",
+      alignRight: true,
     },
   ]
 };

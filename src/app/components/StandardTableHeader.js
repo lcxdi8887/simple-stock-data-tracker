@@ -3,7 +3,9 @@ import PropTypes from 'prop-types';
 
 function StandardTableHeader(props) {
   const columnHeaders = props.columns.map((col) => {
-    return <th key={col.key}>{col.name}</th>
+    return <th key={col.key} className={col.alignRight ? "alignRight" : null} >
+            {col.name}
+           </th>
   });
   columnHeaders.unshift(<th key="no">no</th>);
 
