@@ -4,7 +4,7 @@ export class RightPanel extends React.Component {
   render() {
     return (
       <div>
-        stockdetails
+        {this.props.stockSymbol}
       </div>
     );
   }

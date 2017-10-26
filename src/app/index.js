@@ -7,7 +7,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      stockSymbol: "",
+      stockSymbol: null,
       stockDetails: {
         quote: {},
         news: [],
@@ -17,22 +17,16 @@ class App extends React.Component {
   }
 
   handleCellClick(e) {
-    // let stockCode = e.currentTarget.title;
-    // if (stockCode) {
-    //   let tempapi = "https://api.iextrading.com/1.0/stock/" + stockCode + "/batch?types=quote,news,chart&range=1m&last=10";
-    //   fetchData(tempapi, function(data) {
-    //     this.setState({
-    //       stockDetails: data,
-    //       stockSymbol: data.quote.symbol,
-    //     });
-    //   }, this);
-    // }
+    const currentSymbol = e.target.parentNode.dataset.symbol;
+    if (currentSymbol) {
+      this.setState({ stockSymbol: currentSymbol });
+    }
   }
 
   render() {
     return (
       <div className="clearfix">
-        <StockLists onClickHandler={this.handleCellClick.bind(this)} />
+        <StockLists handleCellClick={this.handleCellClick.bind(this)} />
         <RightPanel stockSymbol={this.state.stockSymbol}
                     quote={this.state.stockDetails.quote}
                     news={this.state.stockDetails.news}

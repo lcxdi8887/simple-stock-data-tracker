@@ -12,7 +12,7 @@ function StandardTable(props) {
                              index={index} />;
   });
   return (
-    <table>
+    <table onClick={props.onClick}>
       <StandardTableHeader columns={props.columns} />
       <tbody>{rows}</tbody>
     </table>

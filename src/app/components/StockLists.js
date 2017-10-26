@@ -80,7 +80,8 @@ export class StockLists extends React.Component {
           <img src="../../icons/info.png" className="iconInfo" title="The stock list table will automatically update every 10 seconds to make sure you have up-to-date data. If you want to retrieve real-time data, please click refresh button." />
         </div>
         <StandardTable columns={EnumsManager.StockListColumns}
-                       data={this.state.stockData} />
+                       data={this.state.stockData}
+                       onClick={this.props.handleCellClick} />
       </div>
     );
   }
