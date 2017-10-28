@@ -3,7 +3,7 @@ import React from "react";
 export class RightPanel extends React.Component {
   render() {
     return (
-      <div>
+      <div className="floatPanel">
         {this.props.stockSymbol}
       </div>
     );

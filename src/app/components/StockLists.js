@@ -80,7 +80,7 @@ export class StockLists extends React.Component {
                        onClick={this.props.handleCellClick} />
         <div className="updatedTime">
           updated on {this.state.updatedTime ? this.state.updatedTime.toLocaleString() : "--"}
-          <img src="../../icons/info.png" className="iconInfo" title="The stock list table will automatically update every 10 seconds to make sure you have up-to-date data. If you want to retrieve real-time data, please click refresh button." />
+          <img src="../../icons/info_grey.png" className="iconInfo" title="The stock list table will automatically update every 10 seconds to make sure you have up-to-date data. If you want to retrieve real-time data, please click refresh button." />
         </div>
       </div>
     );

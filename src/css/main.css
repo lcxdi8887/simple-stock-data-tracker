@@ -442,6 +442,7 @@ button {
     border: none;
     background-color: #fff;
     cursor: pointer;
+    padding: 0 10px;
 }
 
 button:hover {
@@ -457,7 +458,7 @@ button:hover {
     border-width: 0 1px;
     font-size: 10px;
     text-align: right;
-    color: #fff;
+    color: #666;
     padding: 0 10px;
     font-weight: bold;
     text-transform: capitalize;
@@ -496,7 +497,7 @@ button:hover {
 }
 
 .sectionHeader .btnsContainer .toggleButtonsContainer button {
-    margin: 0;
+    margin: 0 0 0 -1px;
     border: 1px solid #ccc;
     border-radius: 2px;
     font-size: 12px;
@@ -513,4 +514,5 @@ button:hover {
     background: #FF9800;
     color: #fff;
     border-color: transparent;
+    font-weight: bold;
 }

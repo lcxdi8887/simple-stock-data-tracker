@@ -8,11 +8,6 @@ class App extends React.Component {
     super(props);
     this.state = {
       stockSymbol: null,
-      stockDetails: {
-        quote: {},
-        news: [],
-        chart: [],
-      }
     };
   }
 
@@ -27,10 +22,9 @@ class App extends React.Component {
     return (
       <div className="clearfix">
         <StockLists handleCellClick={this.handleCellClick.bind(this)} />
-        <RightPanel stockSymbol={this.state.stockSymbol}
-                    quote={this.state.stockDetails.quote}
-                    news={this.state.stockDetails.news}
-                    chart={this.state.stockDetails.chart} />
+        {this.state.stockSymbol ? (
+          <RightPanel stockSymbol={this.state.stockSymbol} />
+        ) : null}
       </div>
     );
   }
