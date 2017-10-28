@@ -75,13 +75,13 @@ export class StockLists extends React.Component {
     return (
       <div className="floatPanel">
         <SectionHeader title="Stock List" buttons={headerButtons} />
+        <StandardTable columns={EnumsManager.StockListColumns}
+                       data={this.state.stockData}
+                       onClick={this.props.handleCellClick} />
         <div className="updatedTime">
           updated on {this.state.updatedTime ? this.state.updatedTime.toLocaleString() : "--"}
           <img src="../../icons/info.png" className="iconInfo" title="The stock list table will automatically update every 10 seconds to make sure you have up-to-date data. If you want to retrieve real-time data, please click refresh button." />
         </div>
-        <StandardTable columns={EnumsManager.StockListColumns}
-                       data={this.state.stockData}
-                       onClick={this.props.handleCellClick} />
       </div>
     );
   }
