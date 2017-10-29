@@ -52,20 +52,20 @@ li {
 /* 
  * Details 
  */
-.stockSummaryInformation {
+.quoteSummary {
     font-size: 21px;
     border-style: solid;
     border-color: #ccc;
-    border-width: 0 1px;
+    border-width: 1px 1px 0;
     padding: 10px;
 }
 
-.stockSummaryInformation .stockChanges .latestPrice {
+.quoteSummary .stockChanges .latestPrice {
     font-size: 48px;
     margin-right: 50px;
 }
 
-.stockSummaryInformation .stockChanges span {
+.quoteSummary .stockChanges span {
     font-size: 28px;
 }
 
@@ -434,6 +434,10 @@ input:checked + .slider:before {
 .floatPanel {
     float: left;
     width: 50%;
+}
+
+.rightPanel {
+    margin-left: -1px;
 }
 
 button {
