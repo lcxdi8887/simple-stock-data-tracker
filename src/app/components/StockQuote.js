@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import { SectionHeader } from "./SectionHeader";
 import { QuoteSummary } from "./QuoteSummary";
+import { QuoteDetails } from "./QuoteDetails";
 
 export class StockQuote extends React.Component {
   constructor(props) {
@@ -20,6 +21,7 @@ export class StockQuote extends React.Component {
         <SectionHeader title={title} buttons={[settingBtn]} />
         <div className="sectionBody">
           <QuoteSummary data={this.props.data} />
+          <QuoteDetails data={this.props.data} />
         </div>
       </div>
     );
