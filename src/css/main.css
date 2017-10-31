@@ -520,3 +520,7 @@ button:hover {
     border-color: transparent;
     font-weight: bold;
 }
+
+.rightPanel .sectionHeader {
+    border-left: 1px solid #fff;
+}
