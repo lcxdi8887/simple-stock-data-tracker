@@ -19,7 +19,7 @@ export class StockNews extends React.Component {
     const news = this.state.simpleView ? <NewsSimpleView data={this.props.data} /> : <NewsComplexView data={this.props.data} />;
     return (
       <div>
-        <SectionHeader title={title} buttons={[settingBtn]} />
+        <SectionHeader title={title} buttons={[settingBtn]} collapsible={true} />
         <div className="sectionBody">
           {news}
         </div>

@@ -18,7 +18,7 @@ export class StockQuote extends React.Component {
 
     return (
       <div>
-        <SectionHeader title={title} buttons={[settingBtn]} />
+        <SectionHeader title={title} buttons={[settingBtn]} collapsible={true} />
         <div className="sectionBody">
           <QuoteSummary data={this.props.data} />
           <QuoteDetails data={this.props.data} />

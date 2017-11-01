@@ -6,7 +6,25 @@ export class SectionHeader extends React.Component {
     super(props);
   }
 
-  render() {                                                
+  handleHeaderClick(e) {
+    debugger;
+    const isHeader = e.target.classList.contains("sectionHeader");
+    if (isHeader) {
+      // toggle arrow orientation
+      if (this.props.collapsible) {
+        e.target.classList.toggle("collapsed");
+      }
+      // toggle body visibility
+      const sectionBody = e.target.nextElementSibling;
+      const hasBody = sectionBody.classList.contains("sectionBody");
+      if (hasBody) {
+        sectionBody.classList.toggle("hidden");
+      }
+    }
+  }
+
+  render() {
+    const className = "sectionHeader" + (this.props.collapsible ? " collapsible" : "");
     let btnsContainer = null;
     if (this.props.buttons !== null) {
       btnsContainer = <div className="btnsContainer">
@@ -15,7 +33,7 @@ export class SectionHeader extends React.Component {
     }
 
     return (
-      <div className="sectionHeader">
+      <div className={className} onClick={this.handleHeaderClick.bind(this)} >
         {this.props.title}
         {btnsContainer}
       </div>

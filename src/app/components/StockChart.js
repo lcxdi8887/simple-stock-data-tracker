@@ -44,7 +44,7 @@ export class StockChart extends React.Component {
   render() {
     return (
       <div>
-        <SectionHeader title="Recent Stock Trend"/>
+        <SectionHeader title="Recent Stock Trend" collapsible={true} />
         <div className="sectionBody">
           <canvas id="stockChart" width="500" height="250"></canvas>
         </div>

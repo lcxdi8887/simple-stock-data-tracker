@@ -486,6 +486,15 @@ button:hover {
     font-size: 14px;
     line-height: 26px;
     cursor: pointer;
+    position: relative;
+}
+
+.rightPanel .sectionHeader {
+    border-left: 1px solid #ccc; 
+}
+
+.rightPanel > div:first-child .sectionHeader {
+    border-left-color: #fff;
 }
 
 .sectionHeader .btnsContainer {
@@ -521,6 +530,26 @@ button:hover {
     font-weight: bold;
 }
 
-.rightPanel .sectionHeader {
-    border-left: 1px solid #fff;
+.sectionHeader.collapsible {
+    padding-left: 40px;
+}
+
+.sectionHeader.collapsible:before {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    top: 10px;
+    left: 10px;
+    background: #009688 url(../icons/arrow.png) center/cover no-repeat;
+    transform: rotate(90deg);
+    transition: 0.5s all;
+}
+
+.sectionHeader.collapsed:before {
+    transform: rotate(0);
+}
+
+.sectionHeader.collapsed {
+    border-bottom: 1px solid;
 }
