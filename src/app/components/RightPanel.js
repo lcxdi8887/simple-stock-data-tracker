@@ -2,6 +2,8 @@ import React from "react";
 import { fetchData } from "../utils";
 
 import { StockQuote } from "./StockQuote";
+import { StockNews } from "./StockNews";
+import { StockChart } from "./StockChart";
 
 export class RightPanel extends React.Component {
   constructor(props) {
@@ -34,7 +36,9 @@ export class RightPanel extends React.Component {
     }
     return (
       <div className="floatPanel rightPanel">
-        <StockQuote symbol={this.props.stockSymbol} data={this.state.quote} />
+        <StockQuote data={this.state.quote} symbol={this.props.stockSymbol} />
+        <StockNews data={this.state.news} />
+        <StockChart chart={this.state.chart} xAxis="date" yAxis="volume" />
       </div>
     );
   }
