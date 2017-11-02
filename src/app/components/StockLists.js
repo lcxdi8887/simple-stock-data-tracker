@@ -77,7 +77,8 @@ export class StockLists extends React.Component {
         <SectionHeader title="Stock List" buttons={headerButtons} />
         <StandardTable columns={EnumsManager.StockListColumns}
                        data={this.state.stockData}
-                       onClick={this.props.handleCellClick} />
+                       onClick={this.props.handleCellClick}
+                       activeType={this.state.activeType} />
         <div className="updatedTime">
           updated on {this.state.updatedTime ? this.state.updatedTime.toLocaleString() : "--"}
           <img src="../../icons/info_grey.png"

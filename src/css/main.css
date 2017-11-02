@@ -319,6 +319,17 @@ th.alignRight {
     width: 85px;
 }
 
+th.descend.alignRight,
+th.ascend.alignRight {
+    background: url(../icons/sort-asc.png) right/20px no-repeat;
+    width: 110px;
+    padding-right: 25px;
+}
+
+th.descend.alignRight {
+    background: url(../icons/sort-desc.png) right/20px no-repeat;
+}
+
 /* dnd */
 .dndContainer {
     padding: 0;
