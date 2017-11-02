@@ -1,6 +1,6 @@
 import React from "react";
-import { fetchData } from "../utils";
 import EnumsManager from "../enumsManager";
+import { fetchData } from "../utils";
 
 import { SectionHeader } from "./SectionHeader";
 import { ToggleButtons } from "./ToggleButtons";
@@ -49,7 +49,7 @@ export class StockLists extends React.Component {
 
   handleToggleButtonsClick(e) {
     const newType = e.target.dataset.type;
-    this.setState( {activeType: newType} );
+    this.setState({ activeType: newType });
     this.fetchDataByType(newType);
   }
 
@@ -80,7 +80,10 @@ export class StockLists extends React.Component {
                        onClick={this.props.handleCellClick} />
         <div className="updatedTime">
           updated on {this.state.updatedTime ? this.state.updatedTime.toLocaleString() : "--"}
-          <img src="../../icons/info_grey.png" className="iconInfo" title="The stock list table will automatically update every 10 seconds to make sure you have up-to-date data. If you want to retrieve real-time data, please click refresh button." />
+          <img src="../../icons/info_grey.png"
+               className="iconInfo"
+               title={"The stock list table will automatically update every 10 seconds to make sure you have up-to-date data. " +
+                      "If you want to retrieve real-time data, please click refresh button."} />
         </div>
       </div>
     );

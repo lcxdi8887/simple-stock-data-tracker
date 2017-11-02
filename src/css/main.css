@@ -455,6 +455,12 @@ button:hover {
 
 .btnRefresh {
     background: url(../icons/refresh.png) center/cover no-repeat;
+    transition: .5s all;
+}
+
+.btnRefresh:hover {
+    transform: rotate(180deg);
+    opacity: 1;
 }
 
 .updatedTime {
