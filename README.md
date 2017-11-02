@@ -4,24 +4,30 @@
 This tool allows user to view up-to-date stocks information, news and recent data.
 
 ## Some New Features:
+- Updating stock list automatically[done]
+- Highlighting column header with order icon based on which type is selected[done]
 - Adding complex news view - done
 - Adding search bar to allow users to search stock by symbol
 - Adding details table for selected stock - done
 - Adding functionality to allow user config the view of stock quote table:
-    - setup number of columns on each row (select between 2-6 for ux purpose) - done
-    - setup which column data they would like to see in this table - done
-- Allowing user to select axis for the line chart - working
+    - setup number of columns on each row (select between 2-6 for ux purpose) - transferring
+    - setup which column data they would like to see in this table - transferring
 - Allowing user to fold detail sections (quote, news, chart) by click on blue section header - done
 
 ## Demo
 ### Overview
-This is a tool to help user see top stocks' details, news and past chart easily.
+This is a tool to allow user get insights about stock market with real-time stock info.
 ![Overview](./demo/overview.png)
 
-### Top Stocks Table
-This tool will automatically retrieve up-to-date top stocks from stock market and listed on the left.
-Users are able to select one of stocks if they would like to see more details.
-![Top Stocks Table](./top-stock-table.PNG)
+### Stock List
+Stock list allows user to find top 10 stocks in different types, including "most active", "top gainers" and "top losers".
+#### Features:
+- Automatically update stock list with a selected type every 10 seconds, time stamp will be updated in the bottom of list;
+- Retrieving real-time stock info via clicking refresh button;
+- Switching list types among "most active", "top gainers" and "top losers", to find out their target stock;
+- Highlighting columns based on list types with sort order;
+- Selecting a specific stock to find out more details about their choice, details will show in the right panel
+![Stock List Table](./demo/stock_list_table.PNG)
 
 ### Stock Details
 This section will display summary and all available data of the selected stock.
