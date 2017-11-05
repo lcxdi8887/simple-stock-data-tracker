@@ -122,7 +122,9 @@ li {
 .newsList {
     margin: 0px;
     list-style: none;
-    padding: 10px;
+    padding: 20px 20px 20px 40px;
+    border: 1px solid #ccc;
+    border-width: 0 1px;
 }
 
 .newsList .releaseDate,
@@ -144,7 +146,7 @@ li {
 }
 
 .newsList .newsLink {
-    width: 300px;
+    width: 500px;
     color: #06c;
     text-decoration: none;
 }
@@ -164,6 +166,7 @@ li {
 .newsList.complexView .newsItem {
     border: 1px solid #ccc;
     border-top-color: transparent;
+    border-width: 1px 0;
     padding: 10px 20px 10px 40px;
 }
 
@@ -363,14 +366,14 @@ th.descend.alignRight {
     padding: 0 10px;
 }
 
-/* Toggle button */
-.toggleButtonContainer {
+/* Slide button */
+.slideButtonContainer {
     position: absolute;
     right: 10px;
     top: 9px;
 }
 
-.toggleButtonContainer span {
+.slideButtonContainer span {
     font-size: 12px;
     font-weight: normal;
 }

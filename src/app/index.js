@@ -12,6 +12,7 @@ class App extends React.Component {
   }
 
   handleCellClick(e) {
+    debugger;
     const currentSymbol = e.target.parentNode.dataset.symbol;
     if (currentSymbol) {
       this.setState({ stockSymbol: currentSymbol });
