@@ -19,6 +19,10 @@ export class RightPanel extends React.Component {
     this.fetchStockBatchData();
   }
 
+  componentWillUpdate() {
+    this.fetchStockBatchData();
+  }
+
   fetchStockBatchData() {
     const api = "https://api.iextrading.com/1.0/stock/" + this.props.stockSymbol + "/batch?types=quote,news,chart&range=3m&last=10";
     fetchData(api, function(data) {

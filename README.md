@@ -36,13 +36,14 @@ Users can open a setting window for this section by clicking the top right butto
 ![Stock Details Settings](./stock-details-settings.PNG)
 
 ### Stock News (complex/compact)
-This section will list maximum 10 latest news of the selected stocks.
-There are two views that users can simply switch by clicking the toggle button. The complex view offers more information about each news, such as summary of news.
+This section will list maximum 10 latest news of the selected stocks. This section is able to be collapsed by click the section header.
+There are two views that users can simply switch by clicking the toggle button. The complex view offers more information about each items, such as summary of the news.
+Compact view is the default view for stock news section.
 
 Compact View
-![News With Compact View](./stock-news-simple-view.PNG)
+![News With Compact View](./demo/stock-news-simple-view.PNG)
 Complex View
-![News With Complex View](./stock-news-complex-view.PNG)
+![News With Complex View](./demo/stock-news-complex-view.PNG)
 
 ### Stock Chart
 This section will draw a line chart about recent volume data of the selected stock. Currently, it only allows users to see the volume data. This part will be enhanced in the new repository.
