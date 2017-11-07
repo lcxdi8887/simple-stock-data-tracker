@@ -576,3 +576,8 @@ button:hover {
 .sectionHeader.collapsed {
     border-bottom: 1px solid;
 }
+
+#stockChart {
+    border: 1px solid #ccc;
+    border-top-width: 0;
+}

@@ -5,16 +5,16 @@ import { SectionHeader } from "./SectionHeader";
 
 export class StockChart extends React.Component {
   getChartData(data, key) {
-    let chartData = data.map((record) => record[key]);
-    return chartData;
+    return data.map((record) => record[key]);
   }
+  
   updateStockChart() {
-    let xAxis = this.props.xAxis;
-    let yAxis = this.props.yAxis;
-    let labels = this.getChartData(this.props.chart, xAxis);
-    let points = this.getChartData(this.props.chart, yAxis);
-    let ctx = document.getElementById("stockChart").getContext('2d');
-    let myChart = new Chart(ctx, {
+    const xAxis = this.props.xAxis;
+    const yAxis = this.props.yAxis;
+    const labels = this.getChartData(this.props.chart, xAxis);
+    const points = this.getChartData(this.props.chart, yAxis);
+    const ctx = document.getElementById("stockChart").getContext('2d');
+    const myChart = new Chart(ctx, {
       type: "line",
       data: {
         labels: labels,
@@ -32,12 +32,10 @@ export class StockChart extends React.Component {
   }
   
   componentDidMount() {
-    debugger;
     this.updateStockChart();
   }
 
   componentDidUpdate() {
-    debugger;
     this.updateStockChart();
   }
 

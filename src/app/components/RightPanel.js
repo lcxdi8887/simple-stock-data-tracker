@@ -19,7 +19,7 @@ export class RightPanel extends React.Component {
     this.fetchStockBatchData();
   }
 
-  componentWillUpdate() {
+  componentWillReceiveProps() {
     this.fetchStockBatchData();
   }
 
