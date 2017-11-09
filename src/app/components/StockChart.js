@@ -11,8 +11,9 @@ export class StockChart extends React.Component {
   updateStockChart() {
     const xAxis = this.props.xAxis;
     const yAxis = this.props.yAxis;
-    const labels = this.getChartData(this.props.chart, xAxis);
-    const points = this.getChartData(this.props.chart, yAxis);
+    const data = this.props.data;
+    const labels = this.getChartData(data, xAxis);
+    const points = this.getChartData(data, yAxis);
     const ctx = document.getElementById("stockChart").getContext('2d');
     const myChart = new Chart(ctx, {
       type: "line",
@@ -52,4 +53,5 @@ export class StockChart extends React.Component {
 }
 
 StockChart.propTypes = {
+  data: PropTypes.array.isRequired,
 };

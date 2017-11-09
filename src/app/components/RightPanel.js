@@ -26,7 +26,7 @@ export class RightPanel extends React.Component {
   fetchStockBatchData() {
     const api = "https://api.iextrading.com/1.0/stock/" + this.props.stockSymbol + "/batch?types=quote,news,chart&range=3m&last=10";
     fetchData(api, function(data) {
-      this.setState({ 
+      this.setState({
         quote: data.quote,
         news: data.news,
         chart: data.chart,
@@ -42,7 +42,7 @@ export class RightPanel extends React.Component {
       <div className="floatPanel rightPanel">
         <StockQuote data={this.state.quote} symbol={this.props.stockSymbol} />
         <StockNews data={this.state.news} />
-        <StockChart chart={this.state.chart} xAxis="date" yAxis="volume" />
+        <StockChart data={this.state.chart} xAxis="date" yAxis="volume" />
       </div>
     );
   }
