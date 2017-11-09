@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { SectionHeader } from "./SectionHeader";
 import { QuoteSummary } from "./QuoteSummary";
 import { QuoteDetails } from "./QuoteDetails";
+import { Modal } from "./Modal";
 
 export class StockQuote extends React.Component {
   constructor(props) {
@@ -23,6 +24,7 @@ export class StockQuote extends React.Component {
           <QuoteSummary data={this.props.data} />
           <QuoteDetails data={this.props.data} />
         </div>
+        <Modal title="abctesting" />
       </div>
     );
   }

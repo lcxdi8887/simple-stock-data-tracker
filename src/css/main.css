@@ -198,48 +198,6 @@ li {
     display: none !important;
 }
 
-.modal {
-    position: fixed;
-    background: rgba(0, 0, 0, .5);
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 10000;
-}
-
-.modalWindow {
-    position: relative;
-    width: 400px;
-    min-height: 300px;
-    margin: auto;
-    background: #fff;
-    top: 50px;
-}
-
-.modalWindow > div {
-    padding: 5px 10px;
-}
-
-.modalHeader {
-    background: #09c;
-    color: #fff;
-    position: relative;
-}
-
-.modalBody {
-    font-size: 13px;
-    min-height: 250px;
-}
-
-.modalBody > div {
-    margin-bottom: 10px;
-}
-
-.modalFooter {
-    border-top: 1px solid #ccc;
-}
-
 .headerBtn {
     position: absolute;
     right: 0;
@@ -580,4 +538,37 @@ button:hover {
 #stockChart {
     border: 1px solid #ccc;
     border-top-width: 0;
+}
+
+.modalWrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .7);
+    z-index: 1000;
+}
+
+.modal {
+    width: 400px;
+    height: 300px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+.modalHeader {
+    background-color: #009688;
+    height: 40px;
+    color: #fff;
+}
+
+.modalBody {
+    height: calc(100% - 80px);
+}
+
+.modalFooter {
+    height: 40px;
+    border-top: 1px solid #ccc;
+    background-color: #e4e4e4;
 }
